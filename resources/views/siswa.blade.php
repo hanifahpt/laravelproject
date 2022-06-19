@@ -9,22 +9,16 @@ integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolfl
     <title>Data Siswa</title>
 </head>
 <body>
-    <div class="container text-center mt-3 pt-3 ng-white">
-        <br>
-@switch($nilai)
-@case(0)
-<div class="alert alert-danger d-inline-block">Tidak Ikut Ujian</div>
-@break
-@case(75)
-<div class="alert alert-warning 
-d-inline-block">Lumayan</div>
-@break
-@case(100)
-<div class="alert alert-success d-inline-block">Sempurna</div>
-@break
-@default
-<div class="alert alert-dark d-inline-block">Nilai Tidak Valid</div>
-@endswitch 
+    <div class="container text-center mt-3 pt-3 
+bg-white">
+<?php $i = 0; ?>
+@while ($i < 5)
+        <div class="alert alert-info 
+d-inline-block">
+            {{$i}}
+        </div>
+        <?php $i++ ?>
+        @endwhile
 </div>
 </body>
 </html>
