@@ -15,8 +15,8 @@
 <br>
 @forelse ($nilai as $val)
 
-@if (($val >= 50) and ($val <= 100))
-@continue
+@if (($val < 50))
+@break
 @endif
 <div class="alert alert-success d-inline-block">
     {{ $val }}
@@ -27,4 +27,3 @@
 </div>
 </body>
 </html>
-
