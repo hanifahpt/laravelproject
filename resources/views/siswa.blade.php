@@ -13,8 +13,8 @@
     {{ $nama }}
 </h1>
 <br>
-@foreach ($nilai as $val)
-@if (($val >= 0) and ($val < 50))
+@forelse ($nilai as $val)
+@if (($val >= 0) and ($val <= 50))
 <div class="alert alert-danger d-inline-block">
     {{ $val }}
 </div>
@@ -23,7 +23,9 @@
     {{ $val }}
 </div>
 @endif
-@endforeach
+@empty
+<div class="alert alert-dark d-inline-block">Tidak ada data...</div>
+@endforelse
 </div>
 </body>
 </html>
