@@ -11,14 +11,15 @@ integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolfl
 <body>
     <div class="container text-center mt-3 pt-3 
 bg-white">
-<?php $i = 0; ?>
-@while ($i < 5)
-        <div class="alert alert-info 
-d-inline-block">
-            {{$i}}
-        </div>
-        <?php $i++ ?>
-        @endwhile
+<h1 class="bg-dark px-3 py-1 text-white d-inline-b
+    {{ $nama }}
+</h1>
+<br>
+@foreach ($nilai as $val)
+<div class="alert alert-info d-inline-block">
+    {{ $val }}
+</div>
+@endforeach
 </div>
 </body>
 </html>
