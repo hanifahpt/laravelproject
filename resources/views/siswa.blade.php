@@ -14,15 +14,13 @@
 </h1>
 <br>
 @forelse ($nilai as $val)
-@if (($val >= 0) and ($val <= 50))
-<div class="alert alert-danger d-inline-block">
-    {{ $val }}
-</div>
-@elseif (($val >= 50) and ($val <= 100))
+
+@if (($val >= 50) and ($val <= 100))
+@continue
+@endif
 <div class="alert alert-success d-inline-block">
     {{ $val }}
 </div>
-@endif
 @empty
 <div class="alert alert-dark d-inline-block">Tidak ada data...</div>
 @endforelse
