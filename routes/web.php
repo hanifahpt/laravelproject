@@ -21,3 +21,16 @@ Route::get('/hanifah', function () {
     return view('hanifah');
 });
 
+Route::get('/siswa', function () {
+    $nama ='Hanifah Aneke Putri';
+    $nilai = '100';
+    return view('siswa', compact('nama', 
+'nilai'));
+});
+
+Route::get('/siswa', function () {
+    $nama ='hanifah';
+    $nilai = [80, 30, 45, 70, 90];
+    return view('siswa', compact('nama', 
+'nilai'));
+});
